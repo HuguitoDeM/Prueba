@@ -15,6 +15,7 @@ header > p{
     line-height: 1.4;
     text-align: justify;
     width: 40%;
+    font-size: 18px;
 }
 
 header > ul{
@@ -22,6 +23,7 @@ header > ul{
     line-height: 1.4;
     width: 40%;
     text-align: justify;
+    font-size: 18px;
 }
 
 .formulario h2{
