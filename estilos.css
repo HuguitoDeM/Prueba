@@ -54,7 +54,10 @@ header > ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
+.contacto a{
+    text-decoration: none;
+    color: blue;
+}
 
 /* Estilos para el formulario */
 .formulario {
