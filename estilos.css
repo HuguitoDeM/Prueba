@@ -10,7 +10,7 @@
   }
   
   header {
-    margin-bottom: 10%;
+    margin-bottom: 20%;
   }
   
   header > p {
@@ -87,11 +87,18 @@
     text-align: center;
   }
   
+  .contacto{
+    margin-top: 20%;
+  }
+  .formas_contacto h3{
+    margin-top: 2%;
+  }
+  .contacto a{
+    text-decoration: none;
+    color: blue;
+  }
   @media (min-width: 800px){
-    *{
-        margin: 0;
-        padding: 0;
-    }
+  
     
     header > h1{
     font-size: 50px;
@@ -142,7 +149,7 @@
     
     .formas_contacto{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .contacto a{
         text-decoration: none;
@@ -204,7 +211,5 @@
       }
       
       /* Estilos adicionales para centrar elementos */
-      .center {
-        text-align: center;
-      }
+     
   }
