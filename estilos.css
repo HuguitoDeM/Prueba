@@ -47,10 +47,71 @@ header > ul{
 .contacto{
    
     margin-top: 20%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .formas_contacto{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
+/* Estilos para el formulario */
+.formulario {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .formulario input[type="text"],
+  .formulario input[type="email"],
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .formulario input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .formulario textarea {
+    resize: vertical;
+  }
+  
+  .formulario input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos adicionales para centrar elementos */
+  .center {
+    text-align: center;
+  }
+  
