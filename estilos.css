@@ -1,215 +1,71 @@
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilos para el encabezado */
-  header > h1 {
-    font-size: 30px;
-  }
-  
-  header {
-    margin-bottom: 20%;
-  }
-  
-  header > p {
-    margin-left: 5%;
-    line-height: 1.4;
-    text-align: justify;
-    width: 90%;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.dia {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.disponible {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.no-disponible {
+  background-color: #ccc;
+  color: #666;
+}
+
+#reservation-form {
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.reservar{
+  display: inline-block;
+    padding: 10px 20px;
     font-size: 16px;
-  }
-  
-  header > ul {
-    margin-left: 5%;
-    line-height: 1.4;
-    width: 90%;
-    text-align: justify;
-    font-size: 16px;
-  }
-  
-  /* Estilos para el formulario */
-  .formulario {
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .formulario h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 20px;
-  }
-  
-  .formulario label {
-    display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .formulario input[type="text"],
-  .formulario input[type="email"],
-  .formulario textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .formulario input[type="file"] {
-    margin-bottom: 5px;
-  }
-  
-  .formulario textarea {
-    resize: vertical;
-  }
-  
-  .formulario input[type="submit"] {
-    background-color: #007bff;
-    color: white;
+    text-align: center;
+    text-decoration: none;
     border: none;
-    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .formulario input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos adicionales para centrar elementos */
-  .center {
-    text-align: center;
-  }
-  
-  .contacto{
-    margin-top: 20%;
-  }
-  .formas_contacto h3{
-    margin-top: 2%;
-  }
-  .contacto a{
-    text-decoration: none;
-    color: blue;
-  }
-  @media (min-width: 800px){
-  
-    
-    header > h1{
-    font-size: 50px;
-    }
-    header{
-        margin-bottom: 20%;
-        
-    }
-    header > p{
-        margin-left: 9%;
-        line-height: 1.4;
-        text-align: justify;
-        width: 40%;
-        font-size: 18px;
-    }
-    
-    header > ul{
-        margin-left: 9%;
-        line-height: 1.4;
-        width: 40%;
-        text-align: justify;
-        font-size: 18px;
-    }
-    
-    .formulario h2{
-        font-size: 30px;
-        margin-bottom: 10%;
-    }
-    
-    .formulario{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-    
-    }
-    .formulario input, label{
-        margin-bottom: 5%;
-       font-size: 20px;
-    }
-    
-    .contacto{
-       
-        margin-top: 20%;
-        font-size: 20px;
-    }
-    
-    .formas_contacto{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .contacto a{
-        text-decoration: none;
-        color: blue;
-    }
-    
-    /* Estilos para el formulario */
-    .formulario {
-        max-width: 70%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f4f4f4;
-        border-radius: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      
-      .formulario h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 24px;
-      }
-      
-      .formulario label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-      
-      .formulario input[type="text"],
-      .formulario input[type="email"],
-      .formulario textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      
-      .formulario input[type="file"] {
-        margin-bottom: 10px;
-      }
-      
-      .formulario textarea {
-        resize: vertical;
-      }
-      
-      .formulario input[type="submit"] {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      
-      .formulario input[type="submit"]:hover {
-        background-color: #0056b3;
-      }
-      
-      /* Estilos adicionales para centrar elementos */
-     
-  }
+    transition: background-color 0.3s, color 0.3s;
+    background-color: gray;
+    color: white;
+}
+
+.reservar:hover{
+  background-color: #4CAF50;
+}
