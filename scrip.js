@@ -1,33 +1,87 @@
+let botonAgregar = document.getElementById("Agregar");
+let botonEliminar = document.getElementById("Eliminar");
+let calendar = document.getElementById('calendar');
+let reservationForm = document.getElementById('reservation-form');
+let diasDisponibles = ['2023-09-15', '2023-09-20'];
+let dia;
+let divBotones = document.getElementById("botones");
+let fechaActual = new Date();
+let year = fechaActual.getFullYear();
+let mes = fechaActual.getMonth() + 1; 
+let diaActual = fechaActual.getDate();
+botonAgregar.addEventListener("click", () => {
+  let inputElement = document.createElement("input");
+  inputElement.setAttribute("type", "text");
+  inputElement.setAttribute("id", "miInput");
 
-const calendar = document.getElementById('calendar');
-const reservationForm = document.getElementById('reservation-form');
+  if (!divBotones.querySelector("input")) {
+    divBotones.appendChild(inputElement);
 
+    inputElement.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") {
+        dia = inputElement.value;
+        AgregarDato(dia);
+        inputElement.remove();
+      }
+    });
+  }
+  
+});
+
+function EliminarDato(dia) {
+  let indice = diasDisponibles.indexOf(dia);
+  if (indice !== -1) {
+    diasDisponibles.splice(indice, 1);
+  }
+}
+
+function AgregarDato(dia) {
+    dia = parseInt(dia);
+   
+    if (dia >= 1 && dia <= 31) {
+      if (dia < diaActual) {
+        let fechaNueva = `${year}-${mes + 1}-${dia}`;
+        diasDisponibles.push(fechaNueva);
+        
+      } else {
+        let fechaNueva = `${year}-${mes}-${dia}`;
+        diasDisponibles.push(fechaNueva);
+      }
+      console.log("Días Disponibles:", diasDisponibles);
+    
+      let divAgregar = document.getElementById(fechaNueva);
+        if (divAgregar) {
+          divAgregar.classList.remove("no-disponible");
+          divAgregar.classList.add("disponible");
+          console.log("hecho");
+        }
+
+    } else {
+      alert("El día ingresado no es válido.");
+    }
+  }
+  
 
 function generarCalendario() {
-  
-    const diasDisponibles = ['2023-09-10', '2023-09-15', '2023-09-20']; 
-
-    
-    const calendarioHTML = [];
-    const fechaHoy = new Date();
+    let calendarioHTML = [];
+    let fechaHoy = new Date();
 
     for (let i = 0; i < 30; i++) {
-        const fecha = new Date();
+        let fecha = new Date();
         fecha.setDate(fechaHoy.getDate() + i);
-        const fechaISO = fecha.toISOString().split('T')[0];
+        let fechaISO = fecha.toISOString().split('T')[0];
 
-      
-        const esDiaDisponible = diasDisponibles.includes(fechaISO);
+        let esDiaDisponible = diasDisponibles.includes(fechaISO);
 
-       
-        calendarioHTML.push(`<div class="dia ${esDiaDisponible ? 'disponible' : 'no-disponible'}">${fecha.getDate()}</div>`);
+    
+        calendarioHTML.push(`<div id="${fechaISO}" class="dia ${esDiaDisponible ? 'disponible' : 'no-disponible'}">${fecha.getDate()}</div>`);
     }
 
     calendar.innerHTML = calendarioHTML.join('');
 }
 
 
-generarCalendario();
+
 
 
 calendar.addEventListener('click', (e) => {
@@ -41,6 +95,7 @@ calendar.addEventListener('click', (e) => {
 
     }
 });
+let boton =document.querySelector(".reservar")
 
 
 
@@ -49,3 +104,5 @@ function realizarReserva(fechaSeleccionada) {
    console.log(`Reservaste para el ${fechaSeleccionada}`);
 
 }
+
+generarCalendario();
