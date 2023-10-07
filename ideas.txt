@@ -1,2 +1,0 @@
-ideas para pagina del rayo: 
-hacer un calendario manual y que cada vez que se selecciona un dia, mandar un correo, tal persona reservo el dia, hacer una funcion que marque el dia y lo desabilite para todos. 
