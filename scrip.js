@@ -2,7 +2,7 @@ let calendar = document.getElementById('calendar');
 let reservationForm = document.getElementById('reservation-form');
 let diasDisponibles = ['2023-09-15', '2023-09-20', "2023-09-21"];
 let dia;
-let divBotones = document.getElementById("botones");
+
 let fechaActual = new Date();
 let year = fechaActual.getFullYear();
 let mes = fechaActual.getMonth() + 1; 
